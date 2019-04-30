@@ -19,7 +19,7 @@ def even_split(n):
     (n-i, n-i, n-i, n-i...with i starting at 0 and approaching n)
     Could more simply be n*(n+1)/2
     """
-    return n*(n+1)//2
+    return n*(n+1) // 2
 
 
 # print(even_split(4))
