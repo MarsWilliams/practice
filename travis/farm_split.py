@@ -19,10 +19,10 @@ def even_split(n):
     (n-i, n-i, n-i, n-i...with i starting at 0 and approaching n)
     Could more simply be n*(n+1)/2
     """
-    return sum((n-i for i in range(n)))
+    return n*(n+1)//2
 
 
-print(even_split(4))
+# print(even_split(4))
 
 
 """
@@ -44,7 +44,7 @@ line formula."""
 
 
 def smaller_split(n):
-    return sum((n-i for i in range(1, n)))
+    return (n - 1) * n // 2
 
 
 print(smaller_split(5))
