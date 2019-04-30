@@ -45,13 +45,9 @@ def anagram_finder_three(strings: List[str]) -> int:
 
     letter_counts = Counter([frozenset(Counter(string).items()) for
                              string in strings])
-    pairs = 0
 
-    for counts in letter_counts:
-        pairs += letter_counts[counts] * \
-                 (letter_counts[counts]-1) // 2
-
-    return pairs
+    return sum([letter_counts[counts] * (letter_counts[counts]-1) // 2
+                for counts in letter_counts])
 
 
 print(anagram_finder_three(['hall', 'hlal', 'hlla',
