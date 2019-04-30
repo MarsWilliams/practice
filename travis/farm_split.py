@@ -22,7 +22,7 @@ def even_split(n):
     return n*(n+1) // 2
 
 
-# print(even_split(4))
+print(even_split(4))
 
 
 """
