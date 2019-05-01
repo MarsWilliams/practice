@@ -45,8 +45,12 @@ Hint: Use nested for loops and slicing
 
 
 def falling_sign_three(sign):
-    return list(set([sign[i:] for i in range(len(sign))]).union([
-        sign[:i] for i in range(1, len(sign) + 1)]))
+    permutations = set()
+    for i in range(len(sign) + 1):
+        for j in range(len(sign)):
+            if sign[j:i]:
+                permutations.add(sign[j:i])
+    return list(permutations)
 
 
 print(falling_sign_three('hall'))
