@@ -39,18 +39,17 @@ Falling Sign 3
 The sign over the Grange Hall is falling apart. Each letter is 
 disappearing one by one, but from either the left or the right. 
 Given a string, return a list of all possible states of the sign.
-'hall' -> ['h', 'ha', 'hal', 'hall', 'a', 'al', 'all', 'll', 'l']
+'hall' -> ['h', 'ha', 'hal', 'hall', 'a', 'al', 'all', 'll', 'l', 'l']
 Hint: Use nested for loops and slicing
 """
 
 
 def falling_sign_three(sign):
-    permutations = set()
-    for i in range(len(sign) + 1):
-        for j in range(len(sign)):
-            if sign[j:i]:
-                permutations.add(sign[j:i])
-    return list(permutations)
+    permutations = []
+    for i in range(len(sign)):
+        for j in range(i, len(sign)):
+            permutations.append(sign[i:j+1])
+    return permutations
 
 
 print(falling_sign_three('hall'))
