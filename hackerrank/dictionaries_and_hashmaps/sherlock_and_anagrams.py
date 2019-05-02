@@ -37,7 +37,7 @@ Sample Output 0
 """
 
 
-def sherlockAndAnagrams(s: str) -> int:
+def sherlock_and_anagrams(s: str) -> int:
     permutations = []
     for i in range(len(s)):
         for j in range(i, len(s)):
@@ -49,4 +49,4 @@ def sherlockAndAnagrams(s: str) -> int:
     return sum(v * (v-1) // 2 for v in counts.values())
 
 
-print(sherlockAndAnagrams('abba'))
+print(sherlock_and_anagrams('abba'))
